@@ -1,7 +1,7 @@
 import {numberReducer} from './numberReducer'
 import {userReducer} from './userReducer'
-// import {combineReducers} from 'redux'
-import {combineReducers} from '../../redux/index'
+import {combineReducers} from 'redux'
+// import {combineReducers} from '../../redux/index'
 
 // export default function reducer(state,action){
 //     let resultResult = {

@@ -1,5 +1,3 @@
-
-
 function isPlainObject(obj){
     // if/
     if(typeof obj != 'object'){
@@ -13,10 +11,18 @@ function isPlainObject(obj){
  * @param {*} reducer 
  * @param {*} state 
  */
-export default function createStore(reducer,state){
+export default function createStore(reducer,state,midware){
     if(typeof reducer != 'function'){
         throw new Error('reducer muse be a function!')
-    }
+    } 
+    // if(typeof state == 'function') {
+    //     midware = state;
+    //     state = undefined;
+    // }
+
+    // if(typeof midware == 'function') {
+    //     return midware(createStore)(reducer, state)
+    // }
     let storeState = state;
     let funcStore = [];
     storeState = reducer(storeState,{
@@ -59,7 +65,3 @@ export default function createStore(reducer,state){
         subscribe,
     }
 }
-// let store = createStore(function(){
-
-// },'state')
-// console.log(store.getState())

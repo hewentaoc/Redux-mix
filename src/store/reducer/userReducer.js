@@ -6,9 +6,12 @@ const initState = [{
 }]
 export  function userReducer(state = initState,action){
     let {type,payload} = action;
+    if(!payload instanceof Array){
+        payload = [payload]
+    }
     switch (type) {
         case userAction.ADDUSER:
-            return [...state,payload];
+            return [...state,...payload];
         case userAction.DELETEUSER:
             return state.filter((item)=>item.id !== payload);
         case userAction.UPDATEUSER:

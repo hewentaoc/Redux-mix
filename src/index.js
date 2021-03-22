@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import './redux/index'
-import './store/index.js'
-// import App from './App';
+// import './store/index.js'
+// import  './store/test'
+import App from './App';
 // import reportWebVitals from './reportWebVitals';
-
+// import './store/demo'
+import './store-learn/index'
 ReactDOM.render(
-  <div>
-  </div>,
+  <App>
+  </App>,
   document.getElementById('root')
 );
 
