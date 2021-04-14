@@ -7,6 +7,7 @@ import {ctx} from './Provider'
  */
 function connect(mapStateToProps,mapDispatchToProps){
     return function Hoc(Comp) {
+        //对于该组件，只有它需要的数据发生变化时才会重新渲染
         return class CompWrap extends PureComponent {
             static contextType = ctx;//得到上下文数据
             constructor(props,context){
